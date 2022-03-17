@@ -5,10 +5,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './app.material.module';
 import { FormsModule } from '@angular/forms';
+import { DiretivaDirective } from './diretiva.directive';
+import { BotaoComponent } from './botao/botao.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DiretivaDirective,
+    BotaoComponent
   ],
   imports: [
     BrowserModule,

@@ -37,7 +37,6 @@
     width: 10px;
     height: 100%;
    margin-left: 10px;
-   background-color: blueviolet;
    border-radius: 5px;
    font-size: 40px;
   }
@@ -52,51 +51,27 @@
     list-style: none;
     height: 45px;
     line-height: 45px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 80%;
-    position: relative;
+    
     background: gray;
     border-radius: 3px;
     margin-bottom: 8px;
     padding: 0px 15px;
 }
 
+  .material-icons{
+      position: relative;
+      
 
-  .delele li{
-    list-style: none;
-    height: 45px;
-    line-height: 45px;
-    font-size: 30px;
-    font-weight: 80%;
-    position: relative;
-    background: gray;
-    border-radius: 3px;
-    margin-bottom: 8px;
-    padding: 0px 15px;
   }
+  .Clear{
+    width: 17%;
+height: 100%;
+margin-left: 10px;
+border-radius: 5px;
+}
 
-  .footer{
-      display: flex;
-      width: 100%;
-      height: 30px;
-      justify-content: space-between;
-      margin-top: 20px;
-      font-size: 15px;
-    }
+  
 
-    .footer button{
-        width: 17%;
-    height: 100%;
-   margin-left: 10px;
-   background-color: blueviolet;
-   border-radius: 5px;
-   
-    }
-
-    .foter{
-        text-align: center;
-     margin-bottom: 50px;
-      height: 30px;
-      margin-top: 20px;
-      font-size: 20px;
-    }
+  

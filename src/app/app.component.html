@@ -3,23 +3,24 @@
 
 <!--Campo de botão-->
 <div class="CampoBotao">
-<input class="ipnt" type="text"placeholder="Add your new todo"[(ngModel)]="tarefa">
-<button class="btn" mat-raised-button  (click)="emitirEvento()">+</button>
+<input class="ipnt" 
+type="text"
+placeholder="Add your new todo"
+[(ngModel)]="tarefa" 
+>
+
+<button class="btn" mat-raised-button  (click)="emitirEvento($event)" diretiva>+</button>
 </div>
 
-{{tarefa}}
+
 
 <!--Lista de tarefas-->
 <ul class=" Lista">
 <li *ngFor="let item of items"> {{item}}
-<button (click)="deletarTarefas(item)" class="delete"> Deletar</button>
+<button (click)="deletarTarefas(item)" class="material-icons"> delete</button>
 
 </ul>
 
-<!--Footer-->
-<div class="footer">
-<span class="foter" >You have 4 pending tasks</span>
-<button >Clear All</button>
-</div>
+<app-botao [mostrar]="items.length" (apagar)="clearall()" diretiva class="clear"></app-botao>
 
 </div>

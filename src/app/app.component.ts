@@ -8,39 +8,35 @@ import { Component, EventEmitter, Output, Input} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  items:string [] = [];
-  tarefa: string = "";
+  items: string [] = [];
+  tarefa: string = '';
 
- emitirEvento(): void{
+ 
+  emitirEvento($event: any){
+   console.log('evento e', $event)
    this.items.push(this.tarefa)
+   localStorage.setItem('items', JSON.stringify(this.items))
  }
  
+ ngOnInit() {
+  let storage = localStorage.getItem('items')
+  let arr = JSON.parse( storage || '[]')
+  this.items = arr      
 
- addTarefa(){
-   this.items.push(this.tarefa)
- }
- 
- deletarTarefas(item:string){
-   this.items.splice(this.items.indexOf(item),1)
- }
-
- hoverIt:boolean;
-  constructor(){
-      this.hoverIt = false;
-  }
-
-  @Input()
-  toDoItem:string = ""
-
-  @Output() 
-  deletev: EventEmitter<any> = new EventEmitter<any>()
-
-  deletef(){
-    this.deletev.emit(this.toDoItem)
-  }
 }
 
 
+ deletarTarefas(item:string){
+   this.items.splice(this.items.indexOf(item),1)
+   localStorage.setItem('items', JSON.stringify(this.items))
+ }
 
 
 
+ clearall(): void{
+  this.items = []
+   localStorage.clear()
+}
+
+
+}
